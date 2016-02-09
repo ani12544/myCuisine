@@ -29,8 +29,8 @@ $(function () {
 
             function getFood() {
                 var deferred = $q.defer();
-                posts = [];
-                var number = [];
+                menu = [];
+
                 var food=[];
                 query.find({
                     success: function (results) {
@@ -46,22 +46,16 @@ $(function () {
                             data.date = formatDate(results[i].get('updatedAt'));
 
 
-                            posts.push(data);
+                            menu.push(data);
 
 
 
                         }
-                        for (var i = 0; i < 3; i++) {
-                            var a = Math.floor(Math.random() * (posts.length - 1)) + 1;
 
-                            number.push(a)
-
-
-                        }
 
                         var arr = [];
                         while(arr.length < 3){
-                            var randomnumber=Math.floor(Math.random() * (posts.length - 1)) + 1;
+                            var randomnumber=Math.floor(Math.random() * (menu.length - 1)) + 1;
 
                             var found=false;
                             for(var i=0;i<arr.length;i++){
@@ -77,10 +71,10 @@ $(function () {
 
 
                         for(var i=0;i<3;i++){
-                            food.push(posts[arr[i]]);
+                            food.push(menu[arr[i]]);
                         }
 
-                        console.log(arr);
+
 
                         deferred.resolve(food);
 
@@ -119,6 +113,7 @@ $(function () {
                 var deferred = $q.defer();
                 posts = [];
 
+                var comment=[];
                 query.find({
                     success: function (results) {
 
@@ -127,17 +122,23 @@ $(function () {
                             var data = {};
                             data.name = results[i].get('name');
                             data.comment = results[i].get('comment');
+                            data.shortComment = results[i].get('comment').substring(0, 300);
                             data.img = results[i].get('img');
                             data.date = formatDate(results[i].get('updatedAt'));
                             data.routeId = results[i].get('routeId');
 
-
                             posts.push(data);
 
-
                         }
+                        var randomnumber=Math.floor(Math.random() * (menu.length - 1)) + 1;
+                        comment.push(posts[randomnumber]);
 
-                        deferred.resolve(posts);
+                        console.log(comment);
+                        deferred.resolve(comment);
+
+
+
+
 
 
                     }, error: function (error) {
@@ -159,8 +160,7 @@ $(function () {
 
         }])
 
-
-        .controller('Controller', ['homeFood',function (homeFood) {
+        .controller('Controller', ['homeFood','posts',function (homeFood,posts) {
             var vm = this;
 
 
@@ -173,9 +173,73 @@ $(function () {
 
 
                 });
+            posts.getPost()
+                .then(function (comment) {
+                    vm.comment = comment;
+                    console.log(comment.name);
+                    $('.home-block').load('.home-block h4.title a ', function () {
+                        Cufon.refresh();
+                    });
+
+
+                });
 
 
 
+
+            //<![CDATA[
+            var map;
+            var geocoder;
+
+            initialize();
+
+            function initialize() {
+                geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Mladost 1 Sofia Bulgaria',
+                    'partialmatch': true
+                }, geocodeResult);
+            }
+
+            function geocodeResult(results, status) {
+
+                if (status == 'OK' && results.length > 0) {
+                    var latlng = new google.maps.LatLng(results[0].geometry.location.b, results[0].geometry.location.c);
+                    var myOptions = {
+                        zoom: 17,
+                        center: results[0].geometry.location,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+
+                    map = new google.maps.Map(document.getElementById("gmaps-container-1"), myOptions);
+                    var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map
+                    });
+
+                    var contentString = '<div id="et-gmaps-content">' +
+                        '<div id="bodyContent">' +
+                        '<p><a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + escape(results[0].formatted_address) + '&amp;ie=UTF8&amp;view=map">' + results[0].formatted_address + '</a>' +
+                        '</p>' +
+                        '</div>' +
+                        '</div>';
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 100
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infowindow.open(map, marker);
+                    });
+
+                    google.maps.event.trigger(marker, "click");
+
+                } else {
+                    //alert("Geocode was not successful for the following reason: " + status);
+                }
+            }
+            //]]>
 
 
 

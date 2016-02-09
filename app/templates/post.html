@@ -31,8 +31,6 @@
         </div>
 
 
-
-
         <!-- end .widget-bottom-->
     </div>
     <h4 class="widgettitle">resent post</h4>
@@ -98,8 +96,6 @@
     </div>
 
 
-
-
 </div>
 <div id="mainpage">
     <nav id="right">
@@ -110,116 +106,118 @@
                 <button class="click">Click Me</button>
             </li>
             <li>
-                <button  class="hovertrigger">Hover Me</button>
+                <button class="hovertrigger">Hover Me</button>
             </li>
         </ul>
     </nav>
 
-        <div id="left-area">
+    <div id="left-area">
 
 
-            <div class="post-thumbnail">
-                <img src="{{vm.food.img}}" class="post-thumb" width="212" height="213" data-id="{{vm.food.id}}">
-                <span class="post-overlay"></span>
-            </div>    <!-- end .post-thumbnail -->
+        <div class="post-thumbnail">
+            <img src="{{vm.food.img}}" class="post-thumb" width="212" height="213" data-id="{{vm.food.id}}">
+            <span class="post-overlay"></span>
+        </div>    <!-- end .post-thumbnail -->
 
-            <p style="text-align: justify">
-                {{vm.food.comment}}
-            </p>
+        <p style="text-align: justify">
+            {{vm.food.comment}}
+        </p>
 
-            <p class="second" style="text-align: justify">
-                {{vm.food.comment}}
-            </p>
-            <div id="comment-wrap">
-                <h3 id="comments">
-                    3 comments
+        <p class="second" style="text-align: justify">
+            {{vm.food.comment}}
+        </p>
+        <div id="comment-wrap">
+            <h3 id="comments">
+                3 comments
+            </h3>
+
+            <ol id="commentlist">
+                <li class="comment" ng-repeat="post in  vm.posts">
+                    <div class="comment-body clearfix">
+                        <div class="avatar-container">
+                            <div class="avatar-box">
+                                <img alt="" src="{{post.img}}" class="avatar" height="56"
+                                     width="56"> <span class="avatar-overlay"></span>
+                            </div> <!-- end .avatar-box -->
+                            <span class="comment-date">{{post.date}}</span>
+                        </div> <!-- end .avatar-container -->
+
+                        <div class="comment-top">
+                            <div class="comment-bottom">
+                                <div class="comment-container">
+                                    <div class="comment-wrap clearfix">
+                                        <div class="comment-meta commentmetadata">
+                                            <span class="fn">
+                                            {{post.name}} Says:
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="comment-content">
+                                            <p>{{post.comment}}
+
+                                            </p>
+
+                                            <div class="reply-container">
+
+                                                <a class="comment-reply-link" onclick=""
+                                                   aria-label="Reply to admin">Reply</a>
+                                            </div>
+                                        </div> <!-- end comment-content-->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </li><!-- #comment-## -->
+
+            </ol>
+            <div id="comment-respond">
+                <h3 id="comment-reply-title">
+                    leave a comment
                 </h3>
 
-                <ol id="commentlist">
-                    <li class="comment"  ng-repeat="post in  vm.posts">
-                        <div class="comment-body clearfix">
-                            <div class="avatar-container">
-                                <div class="avatar-box">
-                                    <img alt="" src= "{{post.img}}"     class="avatar" height="56"
-                                         width="56"> <span class="avatar-overlay"></span>
-                                </div> <!-- end .avatar-box -->
-                                <span class="comment-date">{{post.date}}</span>
-                            </div> <!-- end .avatar-container -->
 
-                            <div class="comment-top">
-                                <div class="comment-bottom">
-                                    <div class="comment-container">
-                                        <div class="comment-wrap clearfix">
-                                            <div class="comment-meta commentmetadata">
-                            <span class="fn">
-                               {{post.name}} Says:
-                            </span>
+                <form action="#" method="post" id="commentform" class="comment-form">
+                    <p class="comment-notes">
 
-                                            </div>
+                        Required fields are marked<span class="required">*</span>
+                    </p>
+                    <p class="comment-form-comment">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" aria-required="true" required="required"
+                                  ng-model="post.comment"></textarea>
+                    </p>
+                    <p class="comment-form-author">
+                        <label for="img">Picture <span class="required">*</span></label>
+                        <input id="img" name="author" type="text" value="" size="30" aria-required="true"
+                               required="required" ng-model="post.img">
+                    </p>
 
-
-                                            <div class="comment-content">
-                                                <p>{{post.comment}}
-
-                                                </p>
-
-                                                <div class="reply-container">
-
-                                                    <a class="comment-reply-link" onclick=""
-                                                       aria-label="Reply to admin">Reply</a>
-                                                </div>
-                                            </div> <!-- end comment-content-->
-
-                                        </div> <!-- end .comment-wrap-->
-                                    </div> <!-- end .comment-container-->
-                                </div> <!-- end .comment-bottom-->
-                            </div> <!-- end .comment-top-->
-                            <div class="comment-arrow"></div>
-                        </div> <!-- end .comment-body-->
+                    <p class="comment-form-author">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input id="name" name="author" type="text" value="" size="30" aria-required="true"
+                               required="required" ng-model="post.name">
+                    </p>
 
 
-                    </li><!-- #comment-## -->
-
-                </ol>
-                <div id="comment-respond">
-                    <h3 id="comment-reply-title">
-                        leave a comment
-                    </h3>
+                    <p class="form-submit">
+                        <button id="btn-add-comments" class="submit">Add</button>
 
 
-                    <form action="#" method="post" id="commentform" class="comment-form">
-                        <p class="comment-notes">
-
-                            Required fields are marked<span class="required">*</span>
-                        </p>
-                        <p class="comment-form-comment">
-                            <label for="comment">Comment</label>
-                            <textarea id="comment" name="comment" aria-required="true" required="required" ng-model="post.comment"></textarea>
-                        </p>
-                        <p class="comment-form-author">
-                            <label for="img">Picture <span class="required">*</span></label>
-                            <input id="img" name="author" type="text" value="" size="30" aria-required="true" required="required" ng-model="post.img">
-                        </p>
-
-                        <p class="comment-form-author">
-                            <label for="name">Name <span class="required">*</span></label>
-                            <input id="name" name="author" type="text" value="" size="30" aria-required="true" required="required" ng-model="post.name">
-                        </p>
+                    </p>
+                </form>
 
 
-                        <p class="form-submit">
-                            <button id="btn-add-comments" class="submit" >Add</button>
-
-
-                        </p>
-                    </form>
-
-
-
-                </div>
             </div>
-
         </div>
+
+    </div>
     <div id="sidebar">
         <h4 class="widgettitle">resent post</h4>
         <div class="widget">
@@ -250,8 +248,6 @@
                     </ul>
                 </div> <!-- end .widget-content-->
             </div>
-
-
 
 
             <!-- end .widget-bottom-->
@@ -316,7 +312,7 @@
                     </ul>
                 </div> <!-- end .widget-content-->
             </div>
-    </div>
+        </div>
     </div>
 
 

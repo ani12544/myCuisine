@@ -149,21 +149,19 @@
 
 
 
-<div id="content-area">
+<div id="content-area" ng-app="myApp">
 
 
-    <div class="container clearfix" ng-app="myApp">
-        <div class="home-block" ng-controller="Controller as vm">
+    <div class="container clearfix" ng-controller="Controller as vm" >
+        <div class="home-block" >
             <h2 class="category_name">
-                Pasta Plates
+                Chef's Recommendations
             </h2>
             <div class="et_menu_item" ng-repeat="food in  vm.foods">
                 <div class="thumb">
                     <a href="#">
                         <img src="{{food.img}}" class="item-image" width="56" height="56" data-id="{{food.id}}">												<span class="overlay"></span>
-                                        <span class="price-tag">
-                                            <span>{{food.price}}</span>
-                                        </span>
+
                     </a>
                 </div> <!-- end .thumb -->
                 <h4 class="title"><a href="#">{{food.name}}</a></h4>
@@ -183,62 +181,8 @@
             </div>
             <!-- end #gmaps-border -->
 
-            <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.1&amp;sensor=false"></script>
-            <script type="text/javascript">
-                //<![CDATA[
-                var map;
-                var geocoder;
 
-                initialize();
 
-                function initialize() {
-                    geocoder = new google.maps.Geocoder();
-                    geocoder.geocode({
-                        'address': 'Mladost 1 Sofia Bulgaria',
-                        'partialmatch': true
-                    }, geocodeResult);
-                }
-
-                function geocodeResult(results, status) {
-
-                    if (status == 'OK' && results.length > 0) {
-                        var latlng = new google.maps.LatLng(results[0].geometry.location.b, results[0].geometry.location.c);
-                        var myOptions = {
-                            zoom: 17,
-                            center: results[0].geometry.location,
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        };
-
-                        map = new google.maps.Map(document.getElementById("gmaps-container-1"), myOptions);
-                        var marker = new google.maps.Marker({
-                            position: results[0].geometry.location,
-                            map: map
-                        });
-
-                        var contentString = '<div id="et-gmaps-content">' +
-                                '<div id="bodyContent">' +
-                                '<p><a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + escape(results[0].formatted_address) + '&amp;ie=UTF8&amp;view=map">' + results[0].formatted_address + '</a>' +
-                                '</p>' +
-                                '</div>' +
-                                '</div>';
-
-                        var infowindow = new google.maps.InfoWindow({
-                            content: contentString,
-                            maxWidth: 100
-                        });
-
-                        google.maps.event.addListener(marker, 'click', function () {
-                            infowindow.open(map, marker);
-                        });
-
-                        google.maps.event.trigger(marker, "click");
-
-                    } else {
-                        //alert("Geocode was not successful for the following reason: " + status);
-                    }
-                }
-                //]]>
-            </script>
 
             <span class="hours_of_work">
                 Mon-Fr
@@ -257,49 +201,71 @@
             <h3 class="title">
                 Customer Testimonials
             </h3>
-            <div class="testimonials-item">
-                <div class="testimonials-item-bottom">
-                    <div class="testimonials-item-content">
-                        <div class="thumb">
-                            <img width="56" height="56" class="item-image" alt="Nick Roach"
-                                 src="http://cdn.elegantthemes.com/preview/MyCuisine/wp-content/uploads/2011/04/a-1.jpg">
-                            <span class="overlay"></span>
+            <div ng-repeat="com in  vm.comment">
+                <div class="comm-top">
+                    <div class="com-bottom">
+                        <div class="com-container">
+                            <div class="comment-wrap">
+                            <div class="thumb">
+                                <img width="56" height="56" class="item-image" alt="Nick Roach"
+                                     src="{{com.img}}">
+                                <span class="overlay"></span>
+                            </div>
+                            <p class="author">
+                                {{com.name}}
+                            </p>
+                            <p>{{com.shortComment}}</p>
+                            </div>
+                            </div>
                         </div>
-                        <!-- end .thumb -->
-                        <p class="author">
-                            Nick Roach
-                        </p>
-                        <p>Pellentesque elementum leo et justo dapibus convalli.&nbsp;
-                            In justo nibh, congue nec dapibus ac, placerat eget sem. Nunc consequat
-                            felis non elit ultricies in varius massa laoreet.
-                            Aenean lectus nisl, ellentesque in fermentum sit amet, convallis a lorem condimentum
-                            mollis.</p>
                     </div>
-                    <!-- end .testimonials-item-content -->
-                </div>
-                <!-- end .testimonials-item-bottom -->
             </div>
-            <!-- end .testimonials-item -->
+
         </div>
-        <!-- end .home-block -->
 
 
+
+    </div>
+
+</div>
+
+<div id="footer-2">
+    <div id="bottom-shadow-2"></div>
+    <div class="container-button">
+    <a class="browse-menu" href="#">
+        <span>Click Here To Browse The Menu</span>
+    </a>
+    </div>
+
+    <div class="container">
+
+        <div class="clearfix" id="footer-bottom">
+            <ul  id="bottom-menu">
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">Location</a></li>
+                <li class="menu-item"><a href="#">Menu</a></li>
+                <li class="menu-item"><a href="#">Page Templates</a></li>
+                <li class="menu-item"><a href="#">Blog</a></li>
+                <li class="menu-item"><a href="#">Contact Us</a></li>
+                <li class="menu-item"><a href=#">Shortcodes</a></li>
+            </ul>
+            <p id="copyright">Designed by
+                <a title="Premium WordPress Themes" href="http://www.elegantthemes.com">Elegant WordPress Themes</a>
+                | Powered by <a href="http://www.wordpress.org">WordPress
+                </a>
+            </p>
+        </div>
+        <!-- end #footer-bottom -->
     </div>
     <!-- end .container -->
 </div>
 
 
 
-<div id="footer-menu">
-    <a class="browse-menu" href="#">
-        <span>Click Here To Browse The Menu</span>
-    </a>
-
-    <div id="bottom-shadow"></div>
-
-</div>
 
 
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.1&amp;sensor=false"></script>
 <script>
     $('.material-menu nav > ul').materialmenu({
         /**

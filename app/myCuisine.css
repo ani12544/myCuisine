@@ -75,6 +75,7 @@ a.readmore span {
 .radio{
     position: relative;
     margin: 0 auto;
+    text-align: justify;
 
 }
 #quote {
@@ -129,7 +130,7 @@ p#quote-line-2 {
     text-shadow: 1px 1px 1px #ffffff;
 }
 #content-area {
-    padding: 65px 0px 142px;
+    padding: 10px 0px 142px;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -151,24 +152,40 @@ p#quote-line-2 {
 }
 .last {
     margin-right: 0px;
+    padding-left: 16px;
+
 }
-.testimonials-item {
-    background: url(images/white-cl.png) no-repeat;
+.comm-top{
+    background: url(images/com-top.png) no-repeat;
+    padding-top: 9px;
+    border-top: 1px #e5e2c6;
+    border-radius: 10px;
 }
-.testimonials-item-bottom {
-    background: url(images/sh.png) no-repeat left bottom;
-    padding-bottom: 52px;
+.com-bottom{
+    background: url(images/com-botton.png) no-repeat bottom left;
+    padding-bottom: 26px;
+    border-bottom: 1px #e5e2c6;
+    border-radius: 10px;
+
 }
-.testimonials-item-content {
-    background: url(images/content-cl.png) repeat-y;
+.com-container{
+    background: url(images/com.png) repeat-y;
+    width: 100%;
 }
-.testimonials-item .thumb {
+
+.home-block .thumb {
     display: block;
     float: left;
     position: relative;
-    margin: 14px 19px 0px 14px;
-    border-top: 1px #cbc8a8;
+    margin-right: 15px;
+
 }
+.comment-wrap {
+    padding: 15px 75px 21px 28px;
+    text-align:justify;
+}
+
+
 .testimonials-item .item-image {
     margin-top: 6px;
     margin-left: 6px;
@@ -181,4 +198,58 @@ p#quote-line-2 {
     position: absolute;
     top: 0px;
     width: 69px;
+}
+p.author {
+    color: #442917;
+    font-size: 22px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+.testimonials-item p {
+    padding-right: 70px;
+    padding-left: 20px;
+}
+a.browse-menu {
+
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    display: block;
+    font-size: 16px;
+    padding-right: 19px;
+    position:relative;
+    margin: 0 auto;
+    text-decoration: none;
+
+}
+a.browse-menu:hover {
+    color: #eeeeee;
+}
+a.browse-menu span {
+
+    display: block;
+    padding-left: 19px;
+    height: 38px;
+    padding-top: 9px;
+    text-align: center;
+}
+#footer-2 {
+    background: #f2f1e8 url(images/footer-bg.png) repeat-x;
+
+}
+.container-button{
+    background:url(images/button-d.png) no-repeat bottom center;
+    height: 38px;
+    position: relative;
+    top: -18px;
+}
+p#copyright a {
+    color: #686650;
+}
+#bottom-shadow-2 {
+    background: url(images/down-sh.png) no-repeat  center;
+    height: 5px;
+    bottom: 3px;
+    position:relative;
 }
