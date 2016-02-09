@@ -1,0 +1,155 @@
+
+
+@media only screen and (max-width: 1000px){
+
+    #main-area {
+        position: absolute;
+        width: 95%;
+        top: 60px;
+        left: 9px;
+
+    }
+
+    #menu-bar {
+        background: url(images/menu-bar-bg.png);
+        position: relative;
+        width: 100%;
+        height: 8.0em;
+        background-repeat:no-repeat;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+        background-position:center;
+    }
+    #page-top #main-area .container {
+        padding-top: 3.0em;
+        width: 100%;
+    }
+
+    ul#top-menu {
+        float: right;
+        width: 100%;
+    }
+    ul#top-menu li {
+        width: 13%;
+    }
+
+    #logo {
+        display: none;
+    }
+    #logo2 {
+        position:relative;
+        top:20px;
+        display: block;
+
+    }
+
+    #page-top .container .description {
+        padding: 10.5em 0 0 3.5em;
+        width: 60%;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        font-size: 1.3em;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .home-block {
+
+        width: 49.6%;
+        margin-left: 0px;
+
+
+    }
+    .description {
+        width: 63%;
+        padding: 10.5em 0 0 0.1em;
+
+    }
+
+    #footer-widget-first{
+        width: 100%;
+    }
+
+    .footer-widget{
+        width: 46%;
+        margin-bottom: 25px;
+
+    }
+
+    .fullwidth #left-area{
+        width: 85%;
+
+    }
+
+    #sidebar{
+        display: none;
+    }
+
+    .comment-content{
+        max-width: 400px;
+    }
+    #right{
+        display: block;
+    }
+
+}
+
+
+.material-menu-button {
+
+}
+
+/** Menu in mobile-view */
+@media only screen and (max-width: 767px) {
+
+    #main-area {
+        background: transparent;
+
+    }
+
+
+    /** Button styling */
+    .material-menu-button {
+        display:block;
+        width:35px;
+        height:45px;
+        padding:17px 10px 0px 10px;
+
+        background: url(images/material-menu-button.png) no-repeat;
+    }
+    .material-menu-button span {
+        display:block;
+        width:100%;
+        height:5px;
+        margin-bottom:4px;
+        background-color:#fff;
+    }
+    ul#top-menu li {
+        width: 69%;
+    }
+    ul#top-menu a{
+        color:#662F23 ;
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);
+    }
+    .material-menu-wrapper {
+        padding:20px;
+    }
+    .material-menu-view-mobile {
+        background-color:#fff;
+        -webkit-box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);
+        box-shadow:40px 0px 30px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    /** Titlebar */
+    .material-menu-titlebar {
+        -webkit-box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+        box-shadow:0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+    #search-form{
+        display: none;
+    }
+}

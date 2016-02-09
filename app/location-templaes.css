@@ -1,0 +1,43 @@
+#gmaps-border {
+    padding: 5px;
+    border: 1px solid #e5e2c6;
+    background: #fff;
+    width: 62%;
+    height: 403px;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -moz-box-shadow: 1px 1px 1px #fff;
+    box-shadow: 1px 1px 1px #fff;
+    margin-bottom: 12px;
+}
+
+#location-left-area {
+    float: left;
+    width: 30%;
+    font-size: 14px;
+}
+#location-left-area .info-block {
+    margin-bottom: 35px;
+    color: #442917;
+}
+
+#gmaps-container {
+    width: 591px;
+    height: 403px;
+}
+
+#gmaps-container  {
+    padding: 0;
+}
+.location-page {
+    float: right;
+    margin-left: 15px;
+}
+.fullwidth #left-area-location {
+
+    text-shadow: 1px 1px 1px #ffffff;
+    color: #716851;
+    font-size: 12px;
+    font-family: Georgia Regular,Arial,sans-serif;
+    padding-left: 10px;
+
+}

@@ -1,0 +1,184 @@
+#header-2{
+    background-color:#452917;
+    background-size: 1400px 255px;
+    height: 465px;
+    display: block;
+    width: 100%;
+    /* z-index: -1; */
+}
+.description {
+    max-width: 960px;
+    width: 39%;
+    margin: 0 auto;
+    margin-left: 15px;
+    padding: 11.5em 0 0 0.1em;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    font-size: 1.3em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.description h2.title {
+    font-size: 3.6em;
+    text-transform: uppercase;
+}
+.description h2.title a {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#shadow-botton{
+    background: url('images/shadow-botton.png')repeat-x;
+    height: 11px;
+    position: relative;
+    top: 52px;
+
+
+}
+#shadow{
+    background: url('images/shadow-top.png')repeat-x;
+    height: 11px;
+
+    margin: 0;
+    position: relative;
+    top:0px;
+
+}
+a.readmore {
+    display: block;
+    background: url(images/readmore.png) no-repeat;
+    float: left;
+    padding: 0 35px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 34px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+a.readmore span {
+    display: block;
+
+    height: 38px;
+    padding: 0 0 0 19px;
+}
+.container-radio {
+    position:relative;
+    top: 65px;
+    margin: 0 auto;
+    width: 100%;
+    background: url(images/switcher-right.png) no-repeat bottom center;
+
+}
+.radio{
+    position: relative;
+    margin: 0 auto;
+
+}
+#quote {
+    background: url(images/quote-bg.png) repeat-x;
+    height: 12.0em;
+    margin-top: -12px;
+    margin-bottom: 57px;
+}
+
+#quote .container {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 17px;
+}
+#quote-shadow {
+    background: url(images/shadow-down.png) no-repeat;
+    width: 96em;
+    height: 0.1em;
+    left: 0px;
+    bottom: -2.38em;
+    position: absolute;
+}
+#quote-stars {
+    background: url(images/star.png) no-repeat center;
+    width: 96em;
+    height: 2em;
+    left: 0px;
+    bottom: -0.8em;
+    position: absolute;
+}
+p#quote-line-1 {
+    font-family: 'Goudy Bookletter 1911', Georgia, serif;
+    font-size: 30px;
+    color: #654e2d;
+    text-shadow: 1px 1px 1px #ffffff;
+    font-style: normal;
+}
+p#quote-line-2 {
+    color: #b4a48d;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #ffffff;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.home-block h3.title {
+    color: #cac6a1;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 13px;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+#content-area {
+    padding: 65px 0px 142px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+#gmaps-container-1 {
+    width: 244px;
+    height: 171px;
+}
+#gmaps-border {
+    padding: 5px;
+    border: 1px solid #e5e2c6;
+    width: 246px;
+    height: 171px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -moz-box-shadow: 1px 1px 1px #fff;
+    box-shadow: 1px 1px 1px #fff;
+    margin-bottom: 12px;
+}
+.last {
+    margin-right: 0px;
+}
+.testimonials-item {
+    background: url(images/white-cl.png) no-repeat;
+}
+.testimonials-item-bottom {
+    background: url(images/sh.png) no-repeat left bottom;
+    padding-bottom: 52px;
+}
+.testimonials-item-content {
+    background: url(images/content-cl.png) repeat-y;
+}
+.testimonials-item .thumb {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 14px 19px 0px 14px;
+    border-top: 1px #cbc8a8;
+}
+.testimonials-item .item-image {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.home-block span.overlay {
+    background: url(images/frame-f-c.png) no-repeat;
+    display: block;
+    height: 73px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 69px;
+}
