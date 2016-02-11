@@ -1,3 +1,7 @@
+
+
+
+
 #header-2{
     background-color:#452917;
     background-size: 1400px 255px;
@@ -30,9 +34,9 @@
 
 #shadow-botton{
     background: url('images/shadow-botton.png')repeat-x;
-    height: 11px;
+    height: 10px;
     position: relative;
-    top: 52px;
+    top: 54px;
 
 
 }
@@ -74,15 +78,57 @@ a.readmore span {
 }
 .radio{
     position: relative;
+    max-width: 140px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
+    top: 20px;
+
 
 }
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+label:before {
+    content: "";
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color:#EAE8CF;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+.radio label:before {
+    border-radius: 8px;
+}
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #60533F;
+    font-size: 40px;
+    text-align: center;
+    line-height: 12px;
+}
+
+
 #quote {
     background: url(images/quote-bg.png) repeat-x;
+    text-align: center;
     height: 12.0em;
     margin-top: -12px;
-    margin-bottom: 57px;
+
 }
 
 #quote .container {
@@ -91,20 +137,18 @@ a.readmore span {
     padding-bottom: 17px;
 }
 #quote-shadow {
-    background: url(images/shadow-down.png) no-repeat;
-    width: 96em;
-    height: 0.1em;
-    left: 0px;
-    bottom: -2.38em;
-    position: absolute;
+    background: url(images/shadow-down.png) no-repeat bottom center ;
+    height: 3px;
+    position: relative;
 }
 #quote-stars {
     background: url(images/star.png) no-repeat center;
-    width: 96em;
-    height: 2em;
-    left: 0px;
-    bottom: -0.8em;
-    position: absolute;
+    position: relative;
+
+    top: 65px;
+    margin: 0 auto;
+    width: 100%;
+    height: 11px;
 }
 p#quote-line-1 {
     font-family: 'Goudy Bookletter 1911', Georgia, serif;
@@ -120,6 +164,7 @@ p#quote-line-2 {
     text-shadow: 1px 1px 1px #ffffff;
     text-transform: uppercase;
     font-style: normal;
+    text-align: center;
 }
 
 .home-block h3.title {
@@ -130,7 +175,7 @@ p#quote-line-2 {
     text-shadow: 1px 1px 1px #ffffff;
 }
 #content-area {
-    padding: 10px 0px 142px;
+    padding: 60px 0px 142px;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -253,3 +298,17 @@ p#copyright a {
     bottom: 3px;
     position:relative;
 }
+span.hours_of_work {
+    color: #cac6a1;
+    font-style: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+span.work_hours_text {
+    font-size: 12px;
+    font-style: normal;
+    color: #442917;
+    margin: 0;
+}
+

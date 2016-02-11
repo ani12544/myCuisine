@@ -76,12 +76,16 @@
     <div >
         <div class="container-radio clearfix">
             <div class="radio">
-                <input type="radio" name="reader" value="reader1" onClick="changeImage('#1a5357');">
-                <input type="radio" name="reader" value="reader1" onClick="changeImage('#404040');">
-                <input type="radio" name="reader" value="reader1" checked onClick="changeImage('#452917');">
-
-                <input type="radio" name="reader" value="reader1" onClick="changeImage('#404040');">
-                <input type="radio" name="reader" value="reader1" onClick="changeImage('#404040');">
+                <input type="radio" name="reader" value="reader1" id="green" onClick="changeImage('#1a5357');">
+                <label for="green"></label>
+                <input type="radio" name="reader" value="reader1" id="grey" onClick="changeImage('#404040');">
+                <label for="grey"></label>
+                <input type="radio" name="reader" value="reader1" id="brown" checked onClick="changeImage('#452917');">
+                <label for="brown"></label>
+                <input type="radio" name="reader" value="reader1" id="blue" onClick="changeImage('  #4C2433');">
+                <label for="blue"></label>
+                <input type="radio" name="reader" value="reader1" id="yellow" onClick="changeImage('#255040');">
+                <label for="yellow"></label>
             </div>
         </div>
     </div>
@@ -112,9 +116,7 @@
                     <ul class="nav" id="top-menu">
                         <li class="menu-item"><a href="#">Home</a></li>
                         <li class="menu-item"><a href="#">Contact</a></li>
-                        <li class="menu-item">
-                            <a href="#/menu">Menu</a>
-
+                        <li class="menu-item"><a href="#/menu">Menu</a></li>
                         <li class="menu-item"><a href="#/location">Location</a></li>
                         <li class="menu-item"><a href="#/nav">Hours</a></li>
                         <li class="menu-item"><a href="#">Awards</a></li>
@@ -125,7 +127,7 @@
                 </nav>
             </div>
 
-            <!-- end #menu-content-->
+
 
 
 
@@ -136,15 +138,16 @@
 
 <div id="quote">
     <div class="container">
-        <div id="quote-shadow"></div>
+
         <div id="quote-stars"></div>
         <p id="quote-line-1">“Your awesome company slogan goes here, we have the best food around”</p>
 
         <p id="quote-line-2">Unc elementum lacus in gravida pellentesque urna dolor eleifend
             felis eleifend</p>
     </div>
-    <!-- end .container -->
+
 </div>
+<div id="quote-shadow"></div>
 
 
 
@@ -163,13 +166,13 @@
                         <img src="{{food.img}}" class="item-image" width="56" height="56" data-id="{{food.id}}">												<span class="overlay"></span>
 
                     </a>
-                </div> <!-- end .thumb -->
+                </div>
                 <h4 class="title"><a href="#">{{food.name}}</a></h4>
                 <p>{{food.shortComment}}...</p>
-            </div> <!-- end .et_menu_item -->
-            <!-- end .et_menu_item -->
+            </div>
+
         </div>
-        <!-- end .home-block -->
+
         <div class="home-block">
 
             <h3 class="title">
@@ -194,7 +197,7 @@
             <span class="work_hours_text">8am-10pm</span>
 
         </div>
-        <!-- end .home-block -->
+
         <div class="home-block last">
 
 
@@ -207,7 +210,7 @@
                         <div class="com-container">
                             <div class="comment-wrap">
                             <div class="thumb">
-                                <img width="56" height="56" class="item-image" alt="Nick Roach"
+                                <img width="56" height="56" class="item-image"
                                      src="{{com.img}}">
                                 <span class="overlay"></span>
                             </div>
@@ -250,8 +253,7 @@
                 <li class="menu-item"><a href=#">Shortcodes</a></li>
             </ul>
             <p id="copyright">Designed by
-                <a title="Premium WordPress Themes" href="http://www.elegantthemes.com">Elegant WordPress Themes</a>
-                | Powered by <a href="http://www.wordpress.org">WordPress
+                <a  href="#">Elegant WordPress Themes</a>| Powered by <a href="#">WordPress
                 </a>
             </p>
         </div>
