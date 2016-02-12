@@ -44,7 +44,7 @@ $(function () {
                             data.price = results[i].get('price');
                             data.img = results[i].get('img');
                             data.date = formatDate(results[i].get('updatedAt'));
-
+                            data.id = results[i].id;
 
                             menu.push(data);
 
@@ -133,7 +133,7 @@ $(function () {
                         var randomnumber=Math.floor(Math.random() * (menu.length - 1)) + 1;
                         comment.push(posts[randomnumber]);
 
-                        console.log(comment);
+
                         deferred.resolve(comment);
 
 
@@ -160,6 +160,8 @@ $(function () {
 
         }])
 
+
+
         .controller('Controller', ['homeFood','posts',function (homeFood,posts) {
             var vm = this;
 
@@ -167,6 +169,7 @@ $(function () {
             homeFood.getFood()
                 .then(function (foods) {
                     vm.foods = foods;
+
                     $('.home-block').load('.home-block h4.title a ', function () {
                         Cufon.refresh();
                     });
@@ -245,6 +248,7 @@ $(function () {
 
 
         }])
+
 
 
 

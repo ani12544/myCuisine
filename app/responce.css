@@ -170,4 +170,13 @@
     #search-form{
         display: none;
     }
+    .container-radio.clearfix{
+        display: none;
+
+    }
+
+    #shadow-botton {
+        display: none;
+        
+    }
 }
