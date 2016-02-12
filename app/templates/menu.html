@@ -5,17 +5,17 @@
             <div class="et_menu_item"  ng-repeat="sea in  vm.seafood">
                 <div class="thumb">
                     <a href="#/post/{{sea.id}}">
-                        <img src="{{sea.img}}" class="item-image" alt="Pesto Shell Pasta" width="56" height="56" data-id="{{sea.id}}">												<span class="overlay"></span>
+                        <img src="{{sea.img}}" class="item-image"  width="56" height="56" data-id="{{sea.id}}">												<span class="overlay"></span>
                                         <span class="price-tag">
                                             <span>{{sea.price}}</span>
                                             </span>
                     </a>
-                </div> <!-- end .thumb -->
-                <h4 class="title"><a href="#">{{sea.name}}</a></h4>
+                </div>
+                <h4 class="title"><a href="#/post/{{sea.id}}">{{sea.name}}</a></h4>
                 <p >{{sea.shortComment}}...</p>
-            </div> <!-- end .et_menu_item -->
+            </div>
 
-        </div> <!-- .home-block -->
+        </div>
 
         <div class="home-block">
             <h2 class="category_name">
@@ -24,31 +24,33 @@
             <div class="et_menu_item" ng-repeat="pasta in  vm.pasta">
                 <div class="thumb">
                     <a href="#/post/{{pasta.id}}">
-                        <img src="{{pasta.img}}" class="item-image" alt="Pesto Risotto" width="56" height="56" data-id="{{pasta.id}}">												<span class="overlay"></span>
+                        <img src="{{pasta.img}}" class="item-image" width="56" height="56" data-id="{{pasta.id}}">												<span class="overlay"></span>
                                         <span class="price-tag">
                                             <span>{{pasta.price}}</span>
                                         </span>
                     </a>
-                </div> <!-- end .thumb -->
-                <h4 class="title"><a href="#">{{pasta.name}}</a></h4>
+                </div>
+                <h4 class="title">
+                    <a href="#/post/{{pasta.id}}">{{pasta.name}}</a>
+                </h4>
                 <p>{{pasta.shortComment}}...</p>
-            </div> <!-- end .et_menu_item -->
-           <!-- end .et_menu_item -->
+            </div>
+
         </div>
 
-        <!-- .home-block -->
+
         <div class="home-block last" >
             <h2 class="category_name">Salads</h2>
             <div class="et_menu_item" ng-repeat="salad in  vm.salads">
                 <div class="thumb">
                     <a href="#/post/{{salad.id}}">
-                        <img src="{{salad.img}}" class="item-image" alt="Cesar Salad" width="56" height="56" data-id="{{salad.id}}">												<span class="overlay"></span>
+                        <img src="{{salad.img}}" class="item-image"  width="56" height="56" data-id="{{salad.id}}">												<span class="overlay"></span>
                                         <span class="price-tag">
                                             <span>{{salad.price}}</span>
                                         </span>
                     </a>
                 </div> <!-- end .thumb -->
-                <h4 class="title"><a href="#">{{salad.name}}</a></h4>
+                <h4 class="title"><a href="#/post/{{salad.id}}">{{salad.name}}</a></h4>
                 <p >{{salad.shortComment}}...</p>
             </div>
         </div> <!-- .home-block -->

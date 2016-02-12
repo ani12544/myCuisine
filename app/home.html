@@ -47,16 +47,7 @@
 
     <link rel="stylesheet" type="text/css" href="responce.css">
 
-    <script>
-        $(function() {
-            $('.accordion > .pane > .content').hide();
-            $('.accordion > .pane:first-child > .content').show();
-            $('.accordion > .pane > .title').click(function() {
-                $('.accordion > .pane > .content').slideUp(250);
-                $(this).parent().find('> .content').slideDown(250);
-            });
-        });
-    </script>
+
 </head>
 
 
@@ -89,7 +80,7 @@
             <div class="material-menu">
                 <nav>
                     <ul class="nav" id="top-menu">
-                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="index.html">Home</a></li>
                         <li class="menu-item"><a href="#">Contact</a></li>
                         <li class="menu-item">
                             <a href="#/menu">Menu</a>
@@ -133,7 +124,7 @@
 
 </div>
 
-    <div ng-modules="myApp">
+    <div ng-modules="myApp" >
 
 
     <div class="container fullwidth">

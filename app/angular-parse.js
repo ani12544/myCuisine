@@ -10,13 +10,6 @@ $(function () {
 
     var posts = new Posts();
 
-    posts.set('name', 'Pesho Peshov');
-    posts.set('img', 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRNlqKuW18eh2OdesfCPAGCIgUxqg3hT7QqbcVfyk1rSSIq2mQtHw');
-    posts.set('comment', 'Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. ' +
-        'Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. ' +
-        'Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh felis lacinia a iaculis nisi vestibulum.' +
-        ' Ut sit amet');
-    posts.set('routeId', 'JybBhCOW9d');
 
 
     angular.module('myApp', ['ngRoute'])
@@ -24,7 +17,6 @@ $(function () {
 
             $routeProvider
                 .when('/menu', {
-
                     templateUrl: 'templates/menu.html',
                     controller: 'MyController',
                     controllerAs: 'vm'
@@ -34,7 +26,6 @@ $(function () {
                 .when('/post/:id', {
                     templateUrl: 'templates/post.html',
                     controller: 'DetailsController',
-
                     controllerAs: 'vm'
                 })
                 .when('/location', {
@@ -358,6 +349,7 @@ $(function () {
             pasta.getPasta()
                 .then(function (pasta) {
                     vm.pasta = pasta;
+
                     $('.home-block').load('.home-block h4.title a ', function () {
                         Cufon.refresh();
                     });
@@ -403,7 +395,6 @@ $(function () {
             currentPosts.getCurrentPosts(routeId)
                 .then(function (posts) {
                     vm.posts = posts;
-
                 });
 
             $('#btn-add-comments').on('click', function () {
@@ -414,6 +405,7 @@ $(function () {
                     comment: $('#comment').val()
 
                 };
+
                 var post = new Posts();
 
                 post.set('name', data.name);
@@ -421,17 +413,11 @@ $(function () {
                 post.set('comment', data.comment);
                 post.set('routeId', routeId);
 
-
                 post.save(null, {
                     success: function () {
-
-
-                        console.log('save');
-
-
+                        $routeParams.reload();
                     }
                 });
-
             });
 
 
@@ -488,8 +474,6 @@ $(function () {
                     right: '0px'
                 }, 400, 'easeOutQuint');
             }
-
-
         }])
 
         .controller('LocationController', [function () {

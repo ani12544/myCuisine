@@ -30,14 +30,23 @@ $(function () {
 
                 })
                 .when('/location', {
-                    templateUrl: 'templates/storeLocation.html'
-
+                    templateUrl: 'templates/storeLocation.html',
+                    controller: 'Location',
+                    controllerAs: 'vm'
                 })
                 .when('/post/:id', {
                     templateUrl: 'templates/postTitle.html',
                     controller: 'Controller',
                     controllerAs: 'vm'
                 })
+        }])
+        .controller('Location', [ function () {
+
+
+            $('.description').load('h2 a', function() { Cufon.refresh(); });
+
+
+
         }])
 
         .controller('Controller', ['$routeParams','food', function ($routeParams,food) {

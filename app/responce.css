@@ -2,6 +2,22 @@
 
 @media only screen and (max-width: 1000px){
 
+    p#quote-line-1{
+        visibility: hidden;
+
+    }
+
+    p#quote-line-1:after{
+        content: 'We have the best food around';
+        visibility:visible;
+    }
+
+    #quote .container {
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 7px;
+    }
+
     #main-area {
         position: absolute;
         width: 95%;
@@ -94,6 +110,8 @@
         display: block;
     }
 
+
+
 }
 
 
@@ -151,5 +169,14 @@
     }
     #search-form{
         display: none;
+    }
+    .container-radio.clearfix{
+        display: none;
+
+    }
+
+    #shadow-botton {
+        display: none;
+        
     }
 }
