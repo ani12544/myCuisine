@@ -251,6 +251,9 @@ p.author {
     padding-bottom: 0px;
     text-shadow: 1px 1px 1px #ffffff;
 }
+.short-comment{
+    max-width: 210px;
+}
 .testimonials-item p {
     padding-right: 70px;
     padding-left: 20px;

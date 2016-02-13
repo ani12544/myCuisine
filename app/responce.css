@@ -2,15 +2,6 @@
 
 @media only screen and (max-width: 1000px){
 
-    p#quote-line-1{
-        visibility: hidden;
-
-    }
-
-    p#quote-line-1:after{
-        content: 'We have the best food around';
-        visibility:visible;
-    }
 
     #quote .container {
         text-align: center;
@@ -79,9 +70,14 @@
 
     }
     .description {
-        width: 63%;
+        width: 96%;
         padding: 10.5em 0 0 0.1em;
 
+    }
+
+
+    .home-page{
+        width: 63%;
     }
 
     #footer-widget-first{
